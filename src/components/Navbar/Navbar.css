@@ -1,0 +1,143 @@
+  .navbar {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1vw;
+    position: fixed;
+    top: 0;
+    z-index: 2; /* Lower z-index for the navbar */
+    box-sizing: border-box;
+  }
+
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    margin: 0;
+    padding-left: 60px; /* Add padding to the left of the navbar links */
+  }
+  
+  .navbar-links li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5vw; /* Responsive font size */
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav-arrow {
+    margin-left: 8px; /* Space between the text and the arrow */
+    font-size: 1vh; /* Adjust the size of the arrow icon */
+    opacity: 0; /* Initially hide the arrow */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+  }
+  
+  .nav-item:hover .nav-arrow {
+    opacity: 1; /* Show the arrow when hovered */
+  }
+
+  .nav-item:hover {
+    color: #333000;
+  }
+
+  .nav-item.active {
+    text-decoration: underline; /* Optional: underline the active link */
+    color: #f0f0f0; /* Optional: change color for active link */
+  }
+
+  .navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: transform 0.3s ease, color 0.3s ease; 
+  }
+  
+  .active-link {
+    text-decoration: underline;
+  }
+  
+  .navbar-logo {
+    padding-left: 60px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 10vh;
+    height: auto;
+    position: relative; /* Ensures the dropdown text is positioned relative to the logo */
+    transition: transform 0.5s ease, opacity 0.5s ease; 
+    opacity: 1;
+  }
+  
+  .navbar-logo-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown {
+    position: fixed; /* Fixed position to cover the entire top portion */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 15vh; /* Full height of the viewport */
+    background-color: #330000; /* Slightly darker background */
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* Prevent interaction when not visible */
+    transition: opacity 0.3s ease;
+  }
+
+  .update-notice {
+    position: absolute;   
+    bottom: 0;            
+    right: 0;             
+    font-size: 2vh;      
+    padding-bottom: 3vh;  
+    padding-right: 5vh;
+    color: white;         
+  }
+
+  .icon-container {
+    position: absolute;
+    bottom: 2vh; /* Adjust this value to move the icons closer or further from the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center the icons horizontally */
+    width: 100%; /* Optional: Make this 100% if you want the icons to center within the full dropdown width */
+    display: flex;
+    justify-content: center;
+  }
+
+  .icon-links {
+    display: flex;
+    gap: 2vh;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .icon-link {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .icon-link:hover {
+    transform: scale(1.2); /* Enlarge the icon on hover */
+    opacity: 0.7; /* Reduce opacity on hover */
+  }
+  
+  .navbar-logo-container:hover .dropdown {
+    opacity: 1;
+    pointer-events: auto; /* Allow interaction when visible */
+    z-index: -1;
+  }
+
+  .navbar-logo-container:hover .navbar-logo {
+    transform: scale(1.5) translateY(-20px); /* Zoom in on the logo */
+  }
+  

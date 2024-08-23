@@ -1,0 +1,44 @@
+.main-header {
+  position: fixed;
+  bottom: 0;
+  width: auto;
+  padding: 4rem;
+  z-index: 999; /* Ensure it stays above other content */
+}
+
+.big-title {
+  font-size: 8vw;
+  color: white;
+  margin: 0;
+  font-weight: bold;
+}
+
+.homeImg-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw; /* Ensure it covers the full viewport width */
+  overflow: hidden; /* Prevents overflow within the container */
+  background-size: cover;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+.homeImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire container without distortion */
+  object-position: center; /* Center the image within the container */
+  overflow: hidden;
+}
+
+.description {
+  position: absolute;
+  bottom: 0;  /* Distance from the top of the screen */
+  right: 0px;
+  color: white; /* Text color */
+  max-width: 400px; /* Optional: Limit the width of the description box */
+  font-size: 2vw;
+  padding: 4rem;
+}
