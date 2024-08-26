@@ -33,9 +33,9 @@ const App = () => {
           flexDirection: 'column', 
           justifyContent: 'center', 
           alignItems: 'center', 
-          height: '100vh', // Make sure it takes the full height of the viewport
+          height: '100vh', 
           padding: '20px', 
-          color: '#333000' 
+          color: 'rgb(224, 200, 168)'
         }}>
           <strong>Webpage not optimized for small resolutions</strong>
         </div>

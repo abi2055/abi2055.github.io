@@ -2,6 +2,7 @@ import React from 'react';
 import './Title.css'
 import mainImg from '../../assets/main-image.jpg'
 import codingBG from '../../assets/codingBG.jpg'
+import spaceBG from '../../assets/moon-bs2.jpg'
 
 const Title = () => {
     return (
@@ -11,8 +12,8 @@ const Title = () => {
           <h1 className="big-title">Naathan</h1>
         </header>
         <div className='homeImg-container'>
-          <img src={codingBG} 
-          alt="Description of the image"
+          <img src={spaceBG} 
+          alt="main page background"
           className='homeImg'
           />
         </div>

@@ -9,6 +9,7 @@ import project5 from '../assets/ecommerce.jpg'
 import CodeIcon from '@mui/icons-material/Code';
 import MovieIcon from '@mui/icons-material/Movie';
 import SettingsOverscanRoundedIcon from '@mui/icons-material/SettingsOverscanRounded';
+import spaceBG2 from '../assets/space-bg2.jpg'
 
 const works = [
   {
@@ -17,7 +18,9 @@ const works = [
     smallDescription: "A Real Estate Web Application made to compete against the likes of Zillow.",
     expandedDescription: "A real estate web app built using React, React Native, Express, Node and Firebase. As a full stack developer I used tools like Redux and ensured the usage of best practices. ",
     imgSrc: project2,
-    skills: ["JavaScript", "TypeScript", "Node", "Express", "React/React Native", "Firebase", "REST APIs", "Redux", "HTML + CSS", "Material UI", "Docker", "Kubernetes"]
+    skills: ["JavaScript", "TypeScript", "Node", "Express", "React/React Native", "Firebase", "REST APIs", "Redux", "HTML + CSS", "Material UI", "Docker", "Kubernetes"],
+    repoLink: "https://github.com/abi2055/nest-app",
+    liveDemoLink: null,
   },
   {
     id: 'work2',
@@ -25,7 +28,9 @@ const works = [
     smallDescription: "A complete maze solver that uses 3 different kinds of algorithms including BFS and benchmarks them aginst eachother.",
     expandedDescription: "A complete Java maze solver that uses 3 different kinds of algorithms: right-hand, tremeaux and BFS and benchmarks them against each other. Uses all principles from industry software design like SOLID, GRASP and GOF patterns. ",
     imgSrc: project3,
-    skills: ["Java", "OOP", "Interfacing", "Patterns", "Apache Maven", "Git + Kanban", "Iterative Development", "Graph Algorithms"]
+    skills: ["Java", "OOP", "Interfacing", "Patterns", "Apache Maven", "Git + Kanban", "Iterative Development", "Graph Algorithms"],
+    repoLink: null,
+    liveDemoLink: "https://www.youtube.com/watch?v=_YJnwmAFYEw",
   },
   {
     id: 'work3',
@@ -33,7 +38,9 @@ const works = [
     smallDescription: "This website is a project that captures my entire programming journey and allows the internet to connect to me.",
     expandedDescription: "This website is a project that captures my entire programming journey and allows the internet to connect to me. I built it using React and Vite, Node and Express. Right now it has no backend functionality, but this website will forever be a progress piece. ",
     imgSrc: project4,
-    skills: ["JavaScript", "Node", "Express", "React", "Material UI", "HTML + CSS"]
+    skills: ["JavaScript", "Node", "Express", "React", "Material UI", "HTML + CSS"],
+    repoLink: "https://github.com/abi2055/portfolio-website",
+    liveDemoLink: null,
   },
   {
     id: 'work4',
@@ -41,7 +48,9 @@ const works = [
     smallDescription: "A deeply personal project that embodies my love of music.",
     expandedDescription: "This tracker allows me to monitor how my musical choices reflect my moods over time, using data from Spotify's API to create visualizations that tell a story about my emotional journey through music.",
     imgSrc: project1,
-    skills: ["Python", "Flask", "Web API", "File I/O", "MatPlotLib", "Json"]
+    skills: ["Python", "Flask", "Web API", "File I/O", "MatPlotLib", "Json"],
+    repoLink: "https://github.com/abi2055/Spotify-Mood-Tracker/tree/main",
+    liveDemoLink: null,
   },
   {
     id: 'work5',
@@ -49,7 +58,9 @@ const works = [
     smallDescription: "Using generative AI, I can prompt the LLM to run through Amazon and add an Item to my cart all autonomously.",
     expandedDescription: "Using generative AI, I can prompt the LLM to run through Amazon and add an Item to my cart all autonomously. Built using LangChain for custom tools, Llava for image recognition, Yolov8 to create bounding boxes and Pyppeteer for controlling inputs.",
     imgSrc: project5,
-    skills: ["Python", "LangChain", "Llava", "Llama Index", "OpenInterpreter", "Yolov8", "Roboflow", "Git", "Pyppeteer"]
+    skills: ["Python", "LangChain", "Llava", "Llama Index", "OpenInterpreter", "Yolov8", "Roboflow", "Git", "Pyppeteer"],
+    repoLink: "https://github.com/abi2055/nest-app",
+    liveDemoLink: "https://www.youtube.com/watch?v=_YJnwmAFYEw",
   },
 ];
 
@@ -68,6 +79,14 @@ const Projects = () => {
       ...prevState,
       [id]: !prevState[id]
     }));
+  };
+
+  const handleCodeClick = (repoLink) => {
+    window.open(repoLink, "_blank"); // Opens the GitHub repository in a new tab
+  };
+
+  const handleLiveDemoClick = (liveDemoLink) => {
+    window.open(liveDemoLink, "_blank"); // Opens the live demo in a new tab
   };
   
   return (
@@ -109,14 +128,30 @@ const Projects = () => {
                 ))}
               </div>
               <div className='content-buttons'>
-                <button className='button-filled'>
-                  Code   
-                  <CodeIcon className='button-icon'/>
-                </button> 
-                <button className='button-filled'>
-                  Live Demo 
-                  <MovieIcon className='button-icon'/>
-                </button> 
+              {work.repoLink && (
+                    <button 
+                      className='button-filled'
+                      onClick={(e) => { 
+                        e.stopPropagation(); // Prevent the project box from expanding when button is clicked
+                        handleCodeClick(work.repoLink);
+                      }} 
+                    >
+                      Code   
+                      <CodeIcon className='button-icon'/>
+                    </button>
+                  )}
+                  {work.liveDemoLink && (
+                    <button 
+                      className='button-filled'
+                      onClick={(e) => { 
+                        e.stopPropagation(); // Prevent the project box from expanding when button is clicked
+                        handleLiveDemoClick(work.liveDemoLink);
+                      }}
+                    >
+                      Live Demo 
+                      <MovieIcon className='button-icon'/>
+                    </button>
+                  )}
               </div>
             </div>
           </div>
