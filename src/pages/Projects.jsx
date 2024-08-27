@@ -59,8 +59,8 @@ const works = [
     expandedDescription: "Using generative AI, I can prompt the LLM to run through Amazon and add an Item to my cart all autonomously. Built using LangChain for custom tools, Llava for image recognition, Yolov8 to create bounding boxes and Pyppeteer for controlling inputs.",
     imgSrc: project5,
     skills: ["Python", "LangChain", "Llava", "Llama Index", "OpenInterpreter", "Yolov8", "Roboflow", "Git", "Pyppeteer"],
-    repoLink: "https://github.com/abi2055/nest-app",
-    liveDemoLink: "https://www.youtube.com/watch?v=_YJnwmAFYEw",
+    repoLink: "https://github.com/abi2055/visual-web-agent",
+    liveDemoLink: null,
   },
 ];
 
