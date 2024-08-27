@@ -1,5 +1,5 @@
 import React from 'react';
-import Title from '../components/MainTitle/Title.jsx';
+import TitleText from '../components/MainTitle/title.jsx';
 import './Home.css'
 import { useEffect, useState } from 'react';
 
@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <div className='home-container'>
       <div className={fadeClass}>
-        <Title />
+        <TitleText />
       </div>
     </div>
   );
