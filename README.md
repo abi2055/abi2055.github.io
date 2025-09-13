@@ -1,7 +1,7 @@
 # abi2055.github.io
 
 This is my personal portfolio website built with **React + Vite** and hosted on **GitHub Pages**.  
-The site is meant to showcase my projects and resumes. I did it for fun. 
+The site is meant to showcase my projects and resume. I did it for fun and I like space (thats why its the theme). 
 
 ## Tech Stack
 - **React + Vite** for fast development and bundling  
