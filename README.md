@@ -16,3 +16,22 @@ Clone the repo and install dependencies:
 git clone https://github.com/abi2055/abi2055.github.io.git
 cd abi2055.github.io
 npm install
+```
+
+Run the dev server:
+```bash
+npm run dev
+```
+
+Open http://localhost:5173 in your browser.
+
+Build for production (outputs to /docs for GitHub Pages):
+```bash
+npm run build
+```
+
+View the Project On Local:
+```bash
+npm run preview
+npm run dev
+```
