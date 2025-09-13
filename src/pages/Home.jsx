@@ -1,5 +1,5 @@
 import React from 'react';
-import TitleText from '../components/MainTitle/title.jsx';
+import TitleText from '../components/MainTitle/Title.jsx';
 import './Home.css'
 import { useEffect, useState } from 'react';
 

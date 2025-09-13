@@ -4,7 +4,7 @@ import mainImg from '../../assets/main-image.jpg'
 import codingBG from '../../assets/codingBG.jpg'
 import spaceBG from '../../assets/moon-bs2.jpg'
 
-const title = () => {
+const Title = () => {
     return (
       <>
         <header className="main-header">

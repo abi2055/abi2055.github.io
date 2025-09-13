@@ -16,7 +16,7 @@ const Navbar = () => {
         <img src={logo} alt="Logo" className="navbar-logo"/>
         <div className="dropdown">
           <div className='update-notice'>
-            Last Updated: 2024 Aug 17th
+            Last Updated: 2025 September 13th
           </div>
           <div className='icon-container'>
             <div className='icon-links'>
@@ -60,7 +60,7 @@ const Navbar = () => {
             </NavLink>
           </li> */}
           <li>
-            <a href="https://drive.google.com/file/d/1GbB7HGQfigYUZNS66tBRb3EQmYVa3NQE/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="nav-item">
+            <a href="https://drive.google.com/file/d/10c4HVfPZcNgJ_X7k1DCyJsn5MbTxzzcF/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="nav-item">
               <div className="nav-item">
               Resume
               <ArrowOutwardIcon className="nav-arrow" />
